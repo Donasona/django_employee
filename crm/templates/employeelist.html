@@ -6,6 +6,20 @@
     <title>Document</title>
 </head>
 <body>
-    {{data}}
+    <h2 style="text-align: center;">Employee Data</h2>
+    <table style="width: 60%; border-collapse: collapse;margin: 20px;background-color: beige;">
+        <th>Employee Name</th>
+        <th>Role</th>
+        <th>Place</th>
+        <th>Salary</th>
+        {% for emp in data %}
+        <tr>
+            <td>{{emp.name}}</td>
+            <td>{{emp.role}}</td>
+            <td>{{emp.place}}</td>
+            <td>{{emp.salary}}</td>
+        </tr>
+        {% endfor %}
+    </table>
 </body>
 </html>
