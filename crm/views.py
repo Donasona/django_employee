@@ -51,3 +51,4 @@ class EmployeeretriveView(View):
         retrive_id = kwargs.get("pk")
         emp_data =Employeemodel.objects.get(id=retrive_id)
         return render(request,"emp_details.html",{"emp_data":emp_data})   
+    
