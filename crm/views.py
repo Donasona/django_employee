@@ -2,6 +2,7 @@ from django.shortcuts import render
 
 # Create your views here.
 from django.views.generic import View
+from crm.forms import Userregistration
 from crm.models import Employeemodel
 
 class CreateemployeeView(View):
@@ -51,4 +52,10 @@ class EmployeeretriveView(View):
         retrive_id = kwargs.get("pk")
         emp_data =Employeemodel.objects.get(id=retrive_id)
         return render(request,"emp_details.html",{"emp_data":emp_data})   
+    
+class Userregisterview(View):
+    def get(self,request):
+        form =Userregistration()
+        return render(request,"register.html",{"form":form})
+
     
