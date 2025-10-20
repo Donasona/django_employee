@@ -24,5 +24,5 @@ urlpatterns = [
     path('emp_update/<int:pk>',EmployeeUpdateView.as_view()),
     path('emp_delete/<int:pk>',EmployeedeleteView.as_view()),
     path('emp_list/',EmployeeListView.as_view()),
-    path('emp_retrieve/',EmployeeretriveView.as_view()),
+    path('emp_retrieve/<int:pk>',EmployeeretriveView.as_view()),
 ]
