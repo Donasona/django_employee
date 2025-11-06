@@ -8,6 +8,7 @@ from crm.models import Employeemodel
 class CreateemployeeView(View):
     def get(self,request):
         return render(request,"add_employee.html")
+    
     def post(self,request):
         print(request.POST)
         Employeemodel.objects.create(name =request.POST.get('username'),
